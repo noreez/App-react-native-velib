@@ -1,0 +1,9 @@
+{
+  "expoServerNgrokUrl": "https://s5-anh.anonymous.awesomeproject.exp.direct",
+  "packagerNgrokUrl": "https://packager.s5-anh.anonymous.awesomeproject.exp.direct",
+  "ngrokPid": 13492,
+  "packagerPort": null,
+  "packagerPid": null,
+  "devToolsPort": 19002,
+  "expoServerPort": 19000
+}
