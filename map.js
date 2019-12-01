@@ -85,7 +85,7 @@ class App extends React.Component {
           title={marker.station_name}
           description={marker.nbebike}>
             
-          <Image source={require('./logo-velo-1.jpg')} style={{ width: 40, height: 40 }} />
+          <Image source={require('./assets/logo-velo-1.jpg')} style={{ width: 40, height: 40 }} />
           
           </MapView.Marker>
           
