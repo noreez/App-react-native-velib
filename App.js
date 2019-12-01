@@ -1,32 +1,16 @@
 import React from 'react';  
-import {StyleSheet, Text, View,Button} from 'react-native';  
-import { createBottomTabNavigator, createAppContainer} from 'react-navigation';  
+import { View,} from 'react-native';  
+import { createAppContainer} from 'react-navigation';  
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';  
 import Icon from 'react-native-vector-icons/Ionicons';  
 
 import Map from './map.js';
-import HomeScreen from './home.js';
-
- class ImageScreen extends React.Component {  
-    render() {  
-        return (  
-            <View style={styles.container}>  
-                <Text>Image Screen</Text>  
-            </View>  
-        );  
-    }  
-}  
-
-const styles = StyleSheet.create({  
-    container: {  
-        flex: 1,  
-        justifyContent: 'center',  
-        alignItems: 'center'  
-    },  
-});  
+import ExercicesSreen from './Exercices/Exercice_2.js';
+import ListScreen from './list.js';
+  
 const TabNavigator = createMaterialBottomTabNavigator(  
     {  
-        Home: { screen: HomeScreen,  
+        Home: { screen: ExercicesSreen,  
             navigationOptions:{  
                 tabBarLabel:'Home',  
                 tabBarIcon: ({ tintColor }) => (  
@@ -47,7 +31,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
                 barStyle: { backgroundColor: '#f69b31' },  
             }  
         },  
-        Image: { screen: ImageScreen,  
+        Image: { screen: ListScreen,  
             navigationOptions:{  
                 tabBarLabel:'List',  
                 tabBarIcon: ({ tintColor }) => (  
@@ -68,4 +52,4 @@ const TabNavigator = createMaterialBottomTabNavigator(
     },  
 );  
   
-export default createAppContainer(TabNavigator);  
+export default createAppContainer(TabNavigator);

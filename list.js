@@ -91,7 +91,7 @@ class ListScreen extends React.Component {
                     <Icon size={25} name={'ios-swap'}/>  
                     <Text style={styles.text}>Etat du totem: {item.fields.station_type}</Text>
                     
-                    <Button title="Home" onPress={this._goHome} />
+                    <Button title="Retouner sur la liste" onPress={this._goHome} />
                     </View>
                     );
                 }

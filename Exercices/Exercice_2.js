@@ -3,6 +3,8 @@ import * as React from 'react';
 import { Button, View, Text} from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import Icon from 'react-native-vector-icons/Ionicons';  
+
 import Exercice1 from './Exercice_1.js';
 import Exercice3 from './Exercice_3.js';
 import Exercice4 from './Exercice_4.js';
@@ -11,12 +13,19 @@ import Exercice4 from './Exercice_4.js';
 class HomeScreen extends React.Component {
     render() {
         return (
+            
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Home Screen</Text>
+            
+            <Icon size={150} name={'ios-bicycle'}/>  
+            
+            
+            <Text>Bievenue  sur la page d'accueil</Text>
+            
             <Button
-            title="Exercices"
+            title="Accéder aux exercices"
             onPress={() => this.props.navigation.navigate('Details')}
             />
+            
             </View>
             );
         }
@@ -48,7 +57,7 @@ class HomeScreen extends React.Component {
                 />
                 
                 <Button
-                title="Go to Home"
+                title="Retourner sur la page d'accueil"
                 onPress={() => this.props.navigation.navigate('Home')}
                 />
                 
