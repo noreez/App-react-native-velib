@@ -1,28 +1,17 @@
 import React from 'react';
 import {Image } from 'react-native';
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
-import Marker from 'react-native-maps';
-
-import {
-  View,
-  Text,
-  StyleSheet,
-  Button,
-  LATITUDE,
-  LONGITUDE,
-  LATITUDE_DELTA,
-  LONGITUDE_DELTA,
-} from "react-native";
+import MapView from 'react-native-maps';
+import {View,StyleSheet,LATITUDE_DELTA,LONGITUDE_DELTA} from "react-native";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       region: {
-        latitude: 48,
-        longitude: 2,
+        latitude: "",
+        longitude: "",
         latitudeDelta: 0.001,
-        longitudeDelta: 0.021,
+        longitudeDelta: 0.010,
       },
       markers: [],
       loaded: false
@@ -77,7 +66,7 @@ class App extends React.Component {
         });
       }
       ).done();
-    }
+    }   
     
     render() {
       
@@ -87,7 +76,8 @@ class App extends React.Component {
         <MapView.Animated
         style={styles.map}
         region={this.state.region}
-        showsUserLocation={true}>
+        showsUserLocation={true}
+        >
         
         {this.state.markers.map(marker => (
           <MapView.Marker
