@@ -1,6 +1,6 @@
 
 import * as React from 'react';
-import { Button, Text, View,StyleSheet} from 'react-native';
+import {Text, View,StyleSheet} from 'react-native';
 import MapView from 'react-native-maps';
 import Icon from 'react-native-vector-icons/Ionicons';  
 

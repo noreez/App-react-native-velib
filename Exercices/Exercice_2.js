@@ -1,10 +1,10 @@
 
 import * as React from 'react';
-import {Alert, StyleSheet, Button, View, Text, TouchableOpacity, Animated,  FlatList, ActivityIndicator, Dimensions  } from 'react-native';
-import MapView from 'react-native-maps';
+import { Button, View, Text} from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import Exercice1 from './Exercice_1.js';
+import Exercice3 from './Exercice_3.js';
 import Exercice4 from './Exercice_4.js';
 
 
@@ -37,6 +37,10 @@ class HomeScreen extends React.Component {
                 onPress={() => this.props.navigation.push('Details')}
                 />
                 
+                <Button
+                title="Exercice 3"
+                onPress={() => this.props.navigation.navigate('Cache')}
+                />
                 
                 <Button
                 title="Exercice 4"
@@ -57,6 +61,7 @@ class HomeScreen extends React.Component {
             Home: HomeScreen,
             Move: Exercice1,
             Details: Exercice2,
+            Cache: Exercice3,
             Composant: Exercice4,
         });
         
